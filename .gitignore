@@ -1,2 +1,29 @@
-.bash_history
+# cache
+.cache
 
+# bash related caching
+.bash_history
+.bash_logout
+.bash_profile
+
+# gdb related files
+.gdb_history
+
+# python related caching
+.python_history
+
+# firefox files
+.mozilla
+
+# .config directories unchanged
+.config/discord
+.config/pulse
+.config/gtk-3.0
+.config/procps
+.config/dconf
+
+# .npm directory
+.npm
+
+# .local directory
+.local

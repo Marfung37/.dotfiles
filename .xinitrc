@@ -34,7 +34,7 @@ if [ -f "$userresources" ]; then
     xrdb -merge "$userresources"
 
 fi
-
+ 
 if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
@@ -50,8 +50,9 @@ fi
 
 twm &
 xclock -geometry 50x50-1+1 &
-xterm -geometry 80x20+494-0 &
+st &
 xscreensaver &
+nitrogen --set-zoom-fill --random ~/Pictures/Wallpaper --save & # random wallpaper startup
 xset r rate 300 30 &
 xrdb /home/mar/.Xresources &
 exec /usr/bin/i3 

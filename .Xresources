@@ -1,7 +1,7 @@
 xterm*faceName: monospace:pixelsize=30
 Xcursor.size: 24
 
-# Terminal theme
+! Terminal theme
 !Theme Fifteen
 *background: rgb:1d/2b/3a
 *foreground: rgb:be/be/be
@@ -23,12 +23,12 @@ Xcursor.size: 24
 *color15:    rgb:ff/ff/ff
 
 
-# xscreensaver settings
-# Define the font of the test
+! xscreensaver settings
+! Define the font of the test
 xscreensaver-auth.default.Dialog.bodyFont: times new roman 12, dejavu serif 12
 
-# Window background color
+! Window background color
 xscreensaver-auth.default.Dialog.background: black
 
-# Main test color
+! Main test color
 xscreensaver-auth.default.Dialog.foreground: white
