@@ -51,6 +51,7 @@ fi
 twm &
 xclock -geometry 50x50-1+1 &
 st &
+xcompmgr -c -C -t-5 -l-5 -r4.2 -o.85 &
 xscreensaver &
 nitrogen --set-zoom-fill --random ~/Pictures/Wallpaper --save & # random wallpaper startup
 xset r rate 300 30 &
