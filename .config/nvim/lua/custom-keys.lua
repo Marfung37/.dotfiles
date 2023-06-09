@@ -4,8 +4,8 @@ vim.g.mapleader = ","
 -- fetch keymap
 local map = vim.api.nvim_set_keymap
 
--- map the key n to run the command :NvimTreeOpen
-map('n', 'n', [[:NvimTreeToggle<CR>]], {})
+-- map the key <C-n> to run the command :NvimTreeToggle
+map('n', '<C-n>', [[:NvimTreeToggle<CR>]], {})
 
 -- nvim-dap keymappings
 -- Press Ctrl+d to toggle debug mode, will remove NvimTree also

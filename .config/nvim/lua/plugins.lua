@@ -50,4 +50,10 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
+
+    -- Treesitter autotag
+    use 'windwp/nvim-ts-autotag'
+
+    -- Commenting
+    use "terrortylor/nvim-comment"
 end)

@@ -15,7 +15,10 @@ require('file-finder') -- Live Grep file finder
 
 -- styling for nvim
 require('styling')
+require('statusbar') -- lualine with pretty status bar
 require('syntax-highlight') -- Treesitter highlighting
+require('autotag') -- Treesitter autotag
+require('comments') -- Commenting
 
 -- DAP Configurations
 require('debugging')
@@ -25,5 +28,5 @@ require('pyright') -- Pyright LSP
 require('debugpy-config') -- Debugpy DAP
 
 -- Web LSP
-require('html-lsp')
+require('html-lsp-config')
 

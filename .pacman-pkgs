@@ -1,9 +1,11 @@
+acpi
 alsa-firmware
 alsa-utils
 archlinux-contrib
 base
 bluez-utils
-cbatticon
+brightnessctl
+cronie
 dhcpcd
 discord
 dmenu
@@ -11,8 +13,10 @@ dunst
 efibootmgr
 feh
 firefox
+font-manager
 gcc
 gdb
+gimp
 git
 grub
 gtk3
@@ -39,6 +43,7 @@ npm
 nvidia
 pacman-contrib
 patch
+perl-image-exiftool
 pkgconf
 pulseaudio
 pulseaudio-alsa
@@ -46,6 +51,8 @@ pulseaudio-bluetooth
 python-pip
 sof-firmware
 sudo
+sxhkd
+ttf-nerd-fonts-symbols
 unzip
 which
 wpa_supplicant
@@ -90,5 +97,4 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
-xscreensaver
 xterm
