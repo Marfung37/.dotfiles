@@ -14,4 +14,4 @@ alias config='/usr/bin/git --git-dir=/home/mar/.cfg/ --work-tree=/home/mar'
 export PATH=$PATH:$HOME/.local/bin
 
 # Default editor
-explort EDITOR="/usr/bin/nvim"
+export EDITOR="/usr/bin/nvim"
