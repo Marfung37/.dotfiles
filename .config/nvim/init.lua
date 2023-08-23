@@ -18,6 +18,7 @@ require('styling')
 require('statusbar') -- lualine with pretty status bar
 require('syntax-highlight') -- Treesitter highlighting
 require('autotag') -- Treesitter autotag
+require('autopairs') -- automatically close parentheses
 require('comments') -- Commenting
 
 -- DAP Configurations
@@ -27,6 +28,8 @@ require('debugging')
 require('pyright') -- Pyright LSP
 require('debugpy-config') -- Debugpy DAP
 
+-- C++ Configurations
+require('clangd')
+
 -- Web LSP
 require('html-lsp-config')
-

@@ -1,6 +1,0 @@
-# Backlight controls
-XF86MonBrightnessDown
-    brightnessctl s 5%-
-XF86MonBrightnessUp
-    brightnessctl s +5%
-

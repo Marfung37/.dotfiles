@@ -55,5 +55,13 @@ return require('packer').startup(function(use)
     use 'windwp/nvim-ts-autotag'
 
     -- Commenting
-    use "terrortylor/nvim-comment"
+    use 'terrortylor/nvim-comment'
+
+    -- TagBar for viewing structure of classes and functions
+    use 'majutsushi/tagbar'
+ 
+    use { 'Yggdroot/indentLine' }                       -- see indentation
+    use { 'tpope/vim-fugitive' }                        -- git integration
+    use { 'junegunn/gv.vim' }                           -- git commit history
+    use { 'windwp/nvim-autopairs' }                     -- auto close brackets, etc.
 end)

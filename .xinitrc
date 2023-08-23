@@ -51,7 +51,6 @@ fi
 st &
 xcompmgr -c -C -t-5 -l-5 -r4.2 -o.85 &
 nitrogen --set-zoom-fill --random ~/Pictures/Wallpaper --save & # random wallpaper startup
-sxhkd -c /home/mar/.config/sxhkd/sxhkdrc & # hotkeys
 xset r rate 300 30 &
 xrdb /home/mar/.Xresources &
 exec /usr/bin/i3 

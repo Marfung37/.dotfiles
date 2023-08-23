@@ -10,8 +10,15 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 alias config='/usr/bin/git --git-dir=/home/mar/.cfg/ --work-tree=/home/mar'
 
-# Additional locations for PATH
-export PATH=$PATH:$HOME/.local/bin
-
 # Default editor
 export EDITOR="/usr/bin/nvim"
+
+# shorthand for listing a directory
+alias ll="ls -al"
+
+# Sfinder commands
+alias sfinder="sh /home/mar/.scripts/sfinder.sh"
+alias extendedPieces="python /home/mar/Documents/sfinderTools/ExtendedSfinderPieces/pieces.py"
+
+# git download files
+alias gits="bash /home/mar/.scripts/download_git.sh"
