@@ -22,3 +22,9 @@ alias extendedPieces="python /home/mar/Documents/sfinderTools/ExtendedSfinderPie
 
 # git download files
 alias gits="bash /home/mar/.scripts/download_git.sh"
+
+# autojump
+[[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
+
+# g++ compile
+alias g++17="g++ -std=c++17 -Wall -Wextra -pedantic -Weffc++ -fsanitize=address,undefined"
