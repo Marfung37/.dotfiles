@@ -1,29 +1,37 @@
-# cache
-.cache
+# default ignore everything
+*
 
-# bash related caching
-.bash_history
-.bash_logout
-.bash_profile
+# keep .gitignore
+!~/.gitignore
 
-# gdb related files
-.gdb_history
+# keep bash files
+!~/.bashrc
+!~/.bash_aliases
+!~/.bash_profile
 
-# python related caching
-.python_history
+# keep xorg files
+!~/.xinitrc
+!~/.Xresources
 
-# firefox files
-.mozilla
+# suckless tools
+!~/.suckless/st-0.9/config.def.h
+!~/.suckless/st-0.9/patches
 
-# .config directories unchanged
-.config/discord
-.config/pulse
-.config/gtk-3.0
-.config/procps
-.config/dconf
+# pacman pkgs
+!~/.pacman-pkgs
 
-# .npm directory
-.npm
+# bash scripts
+!~/.scripts
 
-# .local directory
-.local
+# nvim
+!~/.config/nvim
+
+# i3 config
+!~/.config/i3
+
+# nitrogen
+!~/.config/nitrogen
+# Wallpapers for nitrogen
+~/Pictures/Wallpaper 
+
+

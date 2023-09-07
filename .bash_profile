@@ -12,3 +12,11 @@ fi
 if [ -d "/home/mar/.local/share/gem/ruby/3.0.0/bin" ] ; then
     PATH="$PATH:/home/mar/.local/share/gem/ruby/3.0.0/bin"
 fi
+
+# enable fcitx (IMF) for different langs
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
+# enable screen share on xorg
+export XDG_SESSION_TYPE=X11
