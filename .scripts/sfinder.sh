@@ -1,7 +1,7 @@
 #!/bin/sh
 # variables
-sfinderBase="java -jar /home/mar/Documents/sfinderTools/solution-finder-1.42/sfinder.jar"
-sfinderDefaultArgs="-d 180 -K /home/mar/Documents/sfinderTools/solution-finder-1.42/kicks/jstris180.properties"
+sfinderBase="java -jar /home/mar/Documents/sfinderTools/solution-finder/sfinder.jar"
+sfinderDefaultArgs="-d 180 -K /home/mar/Documents/sfinderTools/solution-finder/kicks/jstris180.properties"
 commandType=$1
 additionalArgs=${@:2}
 

@@ -51,6 +51,7 @@ fi
 st &
 fcitx5 &
 xcompmgr -c -C -t-5 -l-5 -r4.2 -o.85 &
+xset r rate 300 30 &
 nitrogen --set-zoom-fill --random ~/Pictures/Wallpaper --save & # random wallpaper startup
 xrdb /home/mar/.Xresources &
 exec /usr/bin/i3 

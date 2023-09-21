@@ -14,8 +14,12 @@
 !~/.Xresources
 
 # suckless tools
-!~/.suckless/st-0.9/config.def.h
-!~/.suckless/st-0.9/patches
+!.suckless
+!.suckless/st-0.9
+.suckless/st-0.9/*
+!.suckless/st-0.9/config.def.h
+!.suckless/st-0.9/patches/
+!.suckless/st-0.9/patches/*
 
 # pacman pkgs
 !~/.pacman-pkgs
@@ -33,5 +37,4 @@
 !~/.config/nitrogen
 # Wallpapers for nitrogen
 ~/Pictures/Wallpaper 
-
 
