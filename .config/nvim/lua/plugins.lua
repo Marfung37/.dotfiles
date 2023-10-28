@@ -64,4 +64,5 @@ return require('packer').startup(function(use)
     use { 'tpope/vim-fugitive' }                        -- git integration
     use { 'junegunn/gv.vim' }                           -- git commit history
     use { 'windwp/nvim-autopairs' }                     -- auto close brackets, etc.
+
 end)

@@ -33,3 +33,6 @@ require('clangd')
 
 -- Web LSP
 require('html-lsp-config')
+
+-- Java LSP
+require('java')

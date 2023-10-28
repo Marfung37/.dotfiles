@@ -2,16 +2,16 @@
 *
 
 # keep .gitignore
-!~/.gitignore
+!.gitignore
 
 # keep bash files
-!~/.bashrc
-!~/.bash_aliases
-!~/.bash_profile
+!.bashrc
+!.bash_aliases
+!.bash_profile
 
 # keep xorg files
-!~/.xinitrc
-!~/.Xresources
+!.xinitrc
+!.Xresources
 
 # suckless tools
 !.suckless
@@ -22,19 +22,33 @@
 !.suckless/st-0.9/patches/*
 
 # pacman pkgs
-!~/.pacman-pkgs
+!.pacman-pkgs
 
 # bash scripts
-!~/.scripts
+!.scripts
+
+# keep .config but not all in it
+!.config
+.config/*
 
 # nvim
-!~/.config/nvim
+!.config/nvim
+!.config/nvim/lua/
+!.config/nvim/lua/*
+!.config/nvim/plugin/
+!.config/nvim/plugin/*
 
 # i3 config
-!~/.config/i3
+!.config/i3
+!.config/i3/*
 
 # nitrogen
-!~/.config/nitrogen
+!.config/nitrogen
+!.config/nitrogen/*
+
 # Wallpapers for nitrogen
-~/Pictures/Wallpaper 
+!Pictures
+Pictures/*
+!Pictures/Wallpapers/
+!Pictures/Wallpapers/*
 
