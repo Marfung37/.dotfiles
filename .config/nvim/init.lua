@@ -36,3 +36,6 @@ require('html-lsp-config')
 
 -- Java LSP
 require('java')
+
+-- Keylogger
+require('keylogger')

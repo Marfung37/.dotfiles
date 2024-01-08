@@ -9,13 +9,13 @@ map('n', '<C-n>', [[:NvimTreeToggle<CR>]], {})
 
 -- nvim-dap keymappings
 -- Press Ctrl+d to toggle debug mode, will remove NvimTree also
-map('n', '<C-d>', [[:lua require'dapui'.toggle()<CR>]], {})
+map('n', '<C-d>d', [[:lua require'dapui'.toggle()<CR>]], {})
 -- Press f5 to debug
 map('n', '<F5>', [[:lua require'dap'.continue()<CR>]], {})
--- Press CTRL + b to toggle regular breakpoint
-map('n', '<C-b>', [[:lua require'dap'.toggle_breakpoint()<CR>]], {})
--- Press CTRL + c to toggle Breakpoint with Condition
-map('n', '<C-c>', [[:lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint Condition: '))<CR>]], {})
+-- Press CTRL + d + b to toggle regular breakpoint
+map('n', '<C-d>b', [[:lua require'dap'.toggle_breakpoint()<CR>]], {})
+-- Press CTRL + d + c to toggle Breakpoint with Condition
+map('n', '<C-d>c', [[:lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint Condition: '))<CR>]], {})
 -- Press CTRL + l to toggle Logpoint
 map('n', '<C-l>', [[:lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log Point Msg: '))<CR>]], {})
 -- Pressing F10 to step over
@@ -31,3 +31,7 @@ map('n', 'dl', [[:lua require'dap'.run_last()<CR>]], {})
 
 -- Run latex file
 map('n', '<C-s>t', [[:!latexrun %<CR>]], {})
+map('n', '<C-s>b',  [[yyI\begin{<ESC>A}<ESC>o<ESC>pI\end{<ESC>A}<esc>k]], {})
+map('i', '<C-s>b', [[<ESC>yyI\begin{<ESC>A}<ESC>o<ESC>pI\end{<ESC>A}<esc>k]], {})
+
+

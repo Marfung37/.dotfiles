@@ -46,7 +46,7 @@ dap.configurations.python = {
       elseif vim.fn.executable(cwd .. '/.venv/bin/python') == 1 then
         return cwd .. '/.venv/bin/python'
       else
-        return '/usr/bin/python'
+        return '/home/mar/.virtualenvs/debugpy/bin/python'
       end
     end;
   },

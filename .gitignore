@@ -52,3 +52,11 @@ Pictures/*
 !Pictures/Wallpapers/
 !Pictures/Wallpapers/*
 
+# Anime scripts
+!Anime
+Anime/*
+!Anime/scripts/
+Anime/scripts/*
+!Anime/scripts/core/
+!Anime/scripts/core/**
+!Anime/scripts/gogo.py

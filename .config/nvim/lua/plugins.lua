@@ -65,4 +65,7 @@ return require('packer').startup(function(use)
     use { 'junegunn/gv.vim' }                           -- git commit history
     use { 'windwp/nvim-autopairs' }                     -- auto close brackets, etc.
 
+    -- keylogger
+    use { 'tamton-aquib/keys.nvim' }
+
 end)

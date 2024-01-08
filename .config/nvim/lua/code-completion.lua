@@ -69,5 +69,14 @@ cmp.setup({
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require'lspconfig'.texlab.setup {
-  capabilities = capabilities,
+    capabilities = capabilities,
+    build = {
+      executable = "latexrun",
+      forwardSearchAfter = true,
+      onSave = true
+    },
+    latexFormatter = "latexindent",
+    latexindent = {
+      modifyLineBreaks = true
+    }
 }
