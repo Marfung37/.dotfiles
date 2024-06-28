@@ -1,8 +1,8 @@
 vim.opt.mouse="" -- no mouse support in nvim
 
--- tab to 4 spaces
-vim.opt.tabstop=4
-vim.opt.shiftwidth=4
+-- tab to 2 spaces
+vim.opt.tabstop=2
+vim.opt.shiftwidth=2
 vim.opt.expandtab=true
 
 -- fold configs
@@ -13,6 +13,10 @@ vim.opt.foldclose="all"
 -- don't conceal
 vim.g.indentLine_setConceal = 2
 vim.g.indentLine_concealcursor = ""
+
+-- relative number
+vim.opt.number=true
+vim.opt.relativenumber=true
 
 -- allow for changes while in insert mode
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
@@ -26,3 +30,8 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
          update_in_insert = true,
      }
  )
+
+-- Disable virtual_text since it's redundant due to lsp_lines.
+vim.diagnostic.config({
+  virtual_text = false,
+})

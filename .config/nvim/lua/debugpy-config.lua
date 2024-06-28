@@ -17,7 +17,7 @@ dap.adapters.python = function(cb, config)
   else
     cb({
       type = 'executable',
-      command = '/home/mar/.virtualenvs/debugpy/bin/python',
+      command = '/home/mar/.virtualenv/debugpy/bin/python',
       args = { '-m', 'debugpy.adapter' },
       options = {
         source_filetype = 'python',
@@ -46,7 +46,7 @@ dap.configurations.python = {
       elseif vim.fn.executable(cwd .. '/.venv/bin/python') == 1 then
         return cwd .. '/.venv/bin/python'
       else
-        return '/home/mar/.virtualenvs/debugpy/bin/python'
+        return '/home/mar/.virtualenv/debugpy/bin/python'
       end
     end;
   },

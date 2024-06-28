@@ -25,7 +25,7 @@ return require('packer').startup(function(use)
     -- DAP for debugging
     use 'mfussenegger/nvim-dap'
     -- UI for DAP
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
 
     -- Dracula theme for styling
     use 'Mofiqul/dracula.nvim'
@@ -68,4 +68,7 @@ return require('packer').startup(function(use)
     -- keylogger
     use { 'tamton-aquib/keys.nvim' }
 
+    use {"folke/trouble.nvim",
+        requires = { "nvim-tree/nvim-web-devicons" },
+    }
 end)

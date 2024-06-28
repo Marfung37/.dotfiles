@@ -33,18 +33,17 @@
 
 # nvim
 !.config/nvim
-!.config/nvim/lua/
-!.config/nvim/lua/*
-!.config/nvim/plugin/
-!.config/nvim/plugin/*
+!.config/nvim/**
 
 # i3 config
 !.config/i3
 !.config/i3/*
 
-# nitrogen
-!.config/nitrogen
-!.config/nitrogen/*
+# local files
+!.local
+.local/*
+!.local/bin
+!.local/bin/*
 
 # Wallpapers for nitrogen
 !Pictures
@@ -58,5 +57,9 @@ Anime/*
 !Anime/scripts/
 Anime/scripts/*
 !Anime/scripts/core/
-!Anime/scripts/core/**
+!Anime/scripts/core/*
+Anime/scripts/core/*/__pycache__
 !Anime/scripts/gogo.py
+!Anime/scripts/makefile
+!Anime/scripts/api.consumet.org
+Anime/scripts/api.consumet.org/*

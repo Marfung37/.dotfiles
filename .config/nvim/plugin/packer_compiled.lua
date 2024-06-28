@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/mar/.local/share/nvim/site/pack/packer/start/indentLine",
     url = "https://github.com/Yggdroot/indentLine"
   },
+  ["keys.nvim"] = {
+    loaded = true,
+    path = "/home/mar/.local/share/nvim/site/pack/packer/start/keys.nvim",
+    url = "https://github.com/tamton-aquib/keys.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/mar/.local/share/nvim/site/pack/packer/start/lualine.nvim",

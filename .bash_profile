@@ -14,8 +14,8 @@ if [ -d "/home/mar/.local/share/gem/ruby/3.0.0/bin" ] ; then
 fi
 
 # set PATH to use the python and pip in ~/.config/python-pkgs
-if [ -d "/home/mar/.virtualenvs/debugpy/bin" ] ; then
-    PATH="/home/mar/.virtualenvs/debugpy/bin:$PATH"
+if [ -d "/home/mar/.virtualenv/debugpy/bin" ] ; then
+    PATH="/home/mar/.virtualenv/debugpy/bin:$PATH"
 fi
 
 

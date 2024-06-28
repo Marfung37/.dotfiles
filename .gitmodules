@@ -1,0 +1,3 @@
+[submodule "Anime/scripts/api.consumet.org"]
+	path = Anime/scripts/api.consumet.org
+	url = git@github.com:consumet/api.consumet.org.git

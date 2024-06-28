@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Pick a random wallpaper
+wall=$(find /home/mar/Pictures/Wallpaper -type f -name "*.jpg" -o -name "*.png" | shuf -n 1)
+
+# Add the image as the background
+xwallpaper --zoom $wall

@@ -8,7 +8,12 @@
 # Load aliases
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
+# Run autojump
+[[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
+
 # Default editor
 export EDITOR="/usr/bin/nvim"
 
-
+# Change bash prompt
+source ~/.local/bin/git-prompt.sh
+PS1='[\u@\h \W]$(__git_ps1 " (%s)")\$ '
