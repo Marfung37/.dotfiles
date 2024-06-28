@@ -50,16 +50,3 @@
 Pictures/*
 !Pictures/Wallpapers/
 !Pictures/Wallpapers/*
-
-# Anime scripts
-!Anime
-Anime/*
-!Anime/scripts/
-Anime/scripts/*
-!Anime/scripts/core/
-!Anime/scripts/core/*
-Anime/scripts/core/*/__pycache__
-!Anime/scripts/gogo.py
-!Anime/scripts/makefile
-!Anime/scripts/api.consumet.org
-Anime/scripts/api.consumet.org/*
