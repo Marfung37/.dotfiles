@@ -35,3 +35,6 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
 vim.diagnostic.config({
   virtual_text = false,
 })
+
+-- additional extensions
+vim.filetype.add{extension = {sage = 'python'}}

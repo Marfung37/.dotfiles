@@ -37,5 +37,8 @@ require('html-lsp-config')
 -- Java LSP
 require('java')
 
+-- JS DAP
+require('dap-js-config')
+
 -- Keylogger
 require('keylogger')
