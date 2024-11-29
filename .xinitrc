@@ -50,6 +50,7 @@ fi
 
 st &
 /usr/bin/dunst &
+fcitx5 &
 /home/mar/.local/bin/newlook &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 xcompmgr -c -C -t-5 -l-5 -r4.2 -o.85 & # transparent terminal

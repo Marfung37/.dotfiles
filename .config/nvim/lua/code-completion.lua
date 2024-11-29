@@ -11,7 +11,7 @@ cmp.setup({
   -- Required by vsnip
   snippet = {
     expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body)
+        vim.fn["UltiSnips#Anon"](args.body)
     end,
   },
   -- Add Mappings to control the code suggestions
@@ -44,6 +44,8 @@ cmp.setup({
       { name = 'nvim_lua', keyword_length = 2},
       { name = 'buffer', keyword_length = 2 },
       { name = 'vsnip', keyword_length = 2 },
+      { name = "ultisnips" }
+
   },
   -- Add borders to the windows
    window = {

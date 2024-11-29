@@ -38,3 +38,14 @@ vim.diagnostic.config({
 
 -- additional extensions
 vim.filetype.add{extension = {sage = 'python'}}
+
+-- latex stuff
+vim.g.te_flavor='latex'
+vim.g.vimtex_view_method='zathura'
+vim.g.vimtex_quickfix_mode=0
+vim.g.UltiSnipsExpandTrigger="<tab>"
+vim.g.UltiSnipsJumpForwardTrigger="<tab>"
+vim.g.UltiSnipsJumpBackwardTrigger="<s-tab>"
+vim.cmd[[
+  let g:vimtex_compiler_latexmk={'aux_dir' : 'latex.out'}
+]]

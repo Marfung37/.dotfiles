@@ -18,7 +18,7 @@ mkcd () {
 cdls () { cd "$@" && ls; }
 
 # Sfinder commands
-alias extendedPieces="python /home/mar/Documents/sfinderTools/ExtendedSfinderPieces/pieces.py"
+alias extendedPieces="python /home/mar/Document/PerfectClear/sfinderTools/ExtendedSfinderPieces/pieces.py"
 
 # git download files
 alias gits="bash /home/mar/.scripts/download_git.sh"
