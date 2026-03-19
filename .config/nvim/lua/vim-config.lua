@@ -3,6 +3,7 @@ vim.opt.mouse="" -- no mouse support in nvim
 -- tab to 2 spaces
 vim.opt.tabstop=2
 vim.opt.shiftwidth=2
+vim.opt.softtabstop=2
 vim.opt.expandtab=true
 
 -- fold configs
@@ -49,3 +50,10 @@ vim.g.UltiSnipsJumpBackwardTrigger="<s-tab>"
 vim.cmd[[
   let g:vimtex_compiler_latexmk={'aux_dir' : 'latex.out'}
 ]]
+
+-- mdsvex (md for svelte)
+vim.filetype.add({
+  extension = {
+    svx = 'markdown',
+  },
+})

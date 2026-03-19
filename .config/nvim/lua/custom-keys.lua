@@ -50,8 +50,6 @@ vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
 vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
 vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
 
--- Run latex file (found in /home/mar/.config/nvim/ftplugin/tex.lua)
--- map('n', '<C-s>t', [[:!latexrun %<CR>]], {})
--- map('n', '<C-s>b',  [[yyI\begin{<ESC>A}<ESC>o<ESC>pI\end{<ESC>A}<esc>k]], {})
--- map('i', '<C-s>b', [[<ESC>yyI\begin{<ESC>A}<ESC>o<ESC>pI\end{<ESC>A}<esc>k]], {})
+-- Run latex file 
+map('n', '<leader>ll', [[:TeXpresso %<CR>]], {})
 

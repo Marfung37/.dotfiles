@@ -1,0 +1,21 @@
+#!/bin/bash
+infile=$1
+
+# 1. Get total pages
+n=$(pdfinfo $infile | grep Pages | awk '{print $2}')
+
+# 2. Build swapped sequence
+seq=""
+for ((i=4; i<=n; i+=4)); do
+  seq="$seq $(($i - 3)) $i $(($i - 1)) $(($i - 2))"
+done
+
+mv $infile tmp.pdf
+
+# 3. Swap pages order
+pdftk tmp.pdf cat $seq output $infile 
+
+# 4. Combine pairs into spreads (right|left)
+pdfjam --nup 2x1 $infile --landscape --otheredge --suffix book
+
+mv tmp.pdf $infile

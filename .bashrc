@@ -21,3 +21,24 @@ PS1='[\u@\h \W]$(__git_ps1 " (%s)")\$ '
 
 # sage root
 export SAGE_ROOT=/home/mar/.local/src/sage
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
+
+# nvm
+source /usr/share/nvm/init-nvm.sh
+
+cd () {
+  if builtin cd "$@"; then
+    export gr=$(git rev-parse --show-toplevel 2>/dev/null || echo "")
+  fi
+}
+
+# pnpm
+export PNPM_HOME="/home/mar/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

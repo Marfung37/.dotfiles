@@ -2,6 +2,9 @@ global !p
 def math():
     return vim.eval('vimtex#syntax#in_mathzone()') == '1'
 
+def notmath():
+    return vim.eval('vimtex#syntax#in_mathzone()') == '0'
+
 def comment():
     return vim.eval('vimtex#syntax#in_comment()') == '1'
 
@@ -79,6 +82,7 @@ $0
 \end{document}
 endsnippet
 
+context "notmath()"
 snippet beg "begin{} / end{}" bA
 \\begin{$1}
 	$0
@@ -90,6 +94,7 @@ snippet ... "ldots" iA
 \ldots
 endsnippet
 
+context "notmath()"
 snippet mskip "medskip" bA
 \medskip
 endsnippet
@@ -105,6 +110,7 @@ snippet table "Table environment" b
 \end{table}
 endsnippet
 
+context "notmath()"
 snippet fig "Figure environment" b
 \begin{figure}[${1:htpb}]
     \centering
@@ -116,25 +122,27 @@ endsnippet
 
 snippet imgg "image" b
 \begin{center}
-    \includegraphics[$1]{$2}
+  \includegraphics[$1]{$2}
 \end{center}$0
 endsnippet
 
+context "notmath()"
 snippet enum "Enumerate" bA
 \begin{enumerate}
-    \item $0
+  \item $0
 \end{enumerate}
 endsnippet
 
+context "notmath()"
 snippet item "Itemize" bA
 \begin{itemize}
-    \item $0
+  \item $0
 \end{itemize}
 endsnippet
 
 snippet desc "Description" b
 \begin{description}
-    \item[$1] $0
+  \item[$1] $0
 \end{description}
 endsnippet
 
@@ -155,6 +163,11 @@ endsnippet
 context "math()"
 snippet iff "iff" Ai
 \iff
+endsnippet
+
+context "math()"
+snippet s.t. "s.t." Ai
+\text{ s.t. }
 endsnippet
 
 context "math()"
@@ -184,40 +197,45 @@ else:
     snip.rv = ''
 `$2
 endsnippet
+context "notmath()"
 snippet verb "Math" wA
 \verb+$1+$0
 endsnippet
 
+context "notmath()"
 snippet dm "Math" wA
 \[
 	${1:${VISUAL}}
 \] $0
 endsnippet
+context "notmath()"
 snippet bf "Bold Font" wA
 \textbf{$1}$0
 endsnippet
-snippet txt "Text" wA
-\text{$1}$0
-endsnippet
 
+context "notmath()"
 snippet secs "section" wA
 \section{$1}$0
 endsnippet
 
+context "notmath()"
 snippet intc "Make multi line cell" wA
 \begin{tabular}[x]{@{}l@{}}$1\end{tabular}$0
 endsnippet
 
+context "notmath()"
 snippet subss "Subsection" wA
 \subsection{$1}
 $0
 endsnippet
 
+context "notmath()"
 snippet subses "Subsection" wA
 \subsection*{$1}
 $0
 endsnippet
 
+context "notmath()"
 snippet ali "Align" bA
 \begin{align*}
 	${1:${VISUAL}}
@@ -235,6 +253,7 @@ snippet choose "choose" iA
 {$1 \choose $2}$0
 endsnippet
 
+context "math()"
 snippet / "Fraction" i
 \\frac{${VISUAL}}{$1}$0
 endsnippet
@@ -298,10 +317,12 @@ snip.rv = subprocess.check_output(['wolframscript', '-code', code])
 `
 endsnippet
 
+context "math()"
 snippet == "equals" iA
 &= $1 \\\\
 endsnippet
 
+context "math()"
 snippet != "equals" iA
 \neq
 endsnippet
@@ -317,33 +338,41 @@ snippet floor "floor" iA
 endsnippet
 
 context "math()"
-snippet () "left( right)" iA
+snippet ( "left( right)" iA
 \left( ${1:${VISUAL}} \right) $0
 endsnippet
 
+context "math()"
 snippet lr "left( right)" i
 \left( ${1:${VISUAL}} \right) $0
 endsnippet
 
+context "math()"
 snippet lr( "left( right)" i
 \left( ${1:${VISUAL}} \right) $0
 endsnippet
+
+context "math()"
 snippet lr| "left| right|" i
 \left| ${1:${VISUAL}} \right| $0
 endsnippet
 
+context "math()"
 snippet lr{ "left\{ right\}" i
 \left\\{ ${1:${VISUAL}} \right\\} $0
 endsnippet
 
+context "math()"
 snippet lrb "left\{ right\}" i
 \left\\{ ${1:${VISUAL}} \right\\} $0
 endsnippet
 
+context "math()"
 snippet lr[ "left[ right]" i
 \left[ ${1:${VISUAL}} \right] $0
 endsnippet
 
+context "math()"
 snippet lra "leftangle rightangle" iA
 \left<${1:${VISUAL}} \right>$0
 endsnippet
@@ -353,10 +382,12 @@ snippet conj "conjugate" iA
 \overline{$1}$0
 endsnippet
 
+context "math()"
 snippet sum "sum" w
 \sum_{n=${1:1}}^{${2:\infty}} ${3:a_n z^n}
 endsnippet
 
+context "math()"
 snippet taylor "taylor" w
 \sum_{${1:k}=${2:0}}^{${3:\infty}} ${4:c_$1} (x-a)^$1 $0
 endsnippet
@@ -367,26 +398,31 @@ snippet ifm "infimum" iA
 endsnippet
 
 context "math()"
-snippet sup "supremum" iA
+snippet ssup "supremum" iA
 \sup_{$1} $0
 endsnippet
 
+context "math()"
 snippet lim "limit" w
 \lim_{${1:n} \to ${2:\infty}}
 endsnippet
 
+context "math()"
 snippet limsup "limsup" w
 \limsup_{${1:n} \to ${2:\infty}}
 endsnippet
 
+context "math()"
 snippet prod "product" w
 \prod_{${1:n=${2:1}}}^{${3:\infty}} ${4:${VISUAL}} $0
 endsnippet
 
+context "math()"
 snippet part "d/dx" w
 \frac{\partial ${1:V}}{\partial ${2:x}} $0
 endsnippet
 
+context "math()"
 snippet DImethod "DI method" w
 \begin{center}
 \begin{tabular}{|c|c|}
@@ -416,6 +452,7 @@ snippet ^^ "to the ... power" iA
 ^{$1}$0
 endsnippet
 
+context "math()"
 snippet __ "subscript" iA
 _{$1}$0
 endsnippet
@@ -429,10 +466,12 @@ snippet rij "mrij" i
 (${1:x}_${2:n})_{${3:$2}\\in${4:\\N}}$0
 endsnippet
 
+context "math()"
 snippet <= "leq" iA
 \le
 endsnippet
 
+context "math()"
 snippet >= "geq" iA
 \ge
 endsnippet
@@ -498,6 +537,7 @@ snippet R0+ "R0+" iA
 \\R_0^+
 endsnippet
 
+context "notmath()"
 snippet plot "Plot" w
 \begin{figure}[$1]
     \centering
@@ -521,10 +561,6 @@ $0
 endsnippet
 
 context "math()"
-snippet mcal "mathcal" iA
-\mathcal{$1}$0
-endsnippet
-
 snippet lll "l" iA
 \ell
 endsnippet
@@ -540,6 +576,7 @@ snippet xx "cross" iA
 endsnippet
 
 priority 100
+context "math()"
 snippet ** "cdot" iA
 \cdot
 endsnippet
@@ -612,15 +649,17 @@ snippet \\\ "setminus" iA
 \setminus
 endsnippet
 
+context "math()"
 snippet >> ">>" iA
 \gg
 endsnippet
 
+context "math()"
 snippet << "<<" iA
 \ll
 endsnippet
 
-
+context "math()"
 snippet ~~ "~" iA
 \sim
 endsnippet
@@ -640,7 +679,8 @@ snippet cD "superset" Ai
 \superset
 endsnippet
 
-snippet notin "not in " iA
+context "math()"
+snippet notin "not in " Ai
 \not\in
 endsnippet
 
@@ -649,48 +689,69 @@ snippet inn "in " iA
 \in
 endsnippet
 
+context "math()"
 snippet NN "n" iA
 \mathbb{N}
 endsnippet
 
+context "math()"
 snippet Nn "cap" iA
 \cap
 endsnippet
 
+context "math()"
 snippet UU "cup" iA
 \cup
 endsnippet
 
+context "math()"
 snippet uuu "bigcup" iA
 \bigcup_{${1:i \in ${2: I}}} $0
 endsnippet
 
+context "math()"
 snippet nnn "bigcap" iA
 \bigcap_{${1:i \in ${2: I}}} $0
 endsnippet
 
+context "math()"
 snippet OO "emptyset" iA
 \O
 endsnippet
 
+context "math()"
 snippet RR "real" iA
 \mathbb{R}
 endsnippet
+context "math()"
 snippet CC "complex" iA
 \mathbb{C}
 endsnippet
+context "math()"
 snippet QQ "Q" iA
 \mathbb{Q}
 endsnippet
+context "math()"
+snippet FF "F" iA
+\mathbb{F}
+endsnippet
 
+context "math()"
 snippet ZZ "Z" iA
 \mathbb{Z}
 endsnippet
 
+context "math()"
+snippet PP "P" iA
+\mathbb{P}
+endsnippet
+
+context "math()"
 snippet <! "normal" iA
 \triangleleft
 endsnippet
 
+context "math()"
 snippet <> "hokje" iA
 \diamond
 endsnippet
@@ -709,7 +770,7 @@ endsnippet
 context "math()"
 snippet case "cases" wA
 \begin{cases}
-    $1
+  $1
 \end{cases}
 endsnippet
 
@@ -717,13 +778,15 @@ snippet SI "SI" iA
 \SI{$1}{$2}
 endsnippet
 
+context "notmath()"
 snippet bigfun "Big function" iA
 \begin{align*}
-    $1: $2 &\longrightarrow $3 \\\\
-    $4 &\longmapsto $1($4) = $0
+	$1: $2 &\longrightarrow $3 \\\\
+	$4 &\longmapsto $1($4) = $0
 .\end{align*}
 endsnippet
 
+context "math()"
 snippet cvec "column vector" iA
 \begin{pmatrix} ${1:x}_${2:1}\\\\ \vdots\\\\ $1_${2:n} \end{pmatrix}
 endsnippet
@@ -749,42 +812,62 @@ endsnippet
 priority 10
 context "math()"
 snippet "hat" "hat" riA
-\hat{$1}$0
+\widehat{$1}$0
 endsnippet
 
 priority 100
 context "math()"
 snippet "([a-zA-Z])hat" "hat" riA
-\hat{`!p snip.rv=match.group(1)`}
+\widehat{`!p snip.rv=match.group(1)`}
 endsnippet
 
-snippet letw "let omega" iA
-Let $\Omega \subset \C$ be open.
+priority 10
+context "math()"
+snippet "tilde" "tilde" riA
+\widetilde{$1}$0
 endsnippet
 
+priority 100
+context "math()"
+snippet "([a-zA-Z])tilde" "tilde" riA
+\widetilde{`!p snip.rv=match.group(1)`}
+endsnippet
 
+# snippet letw "let omega" iA
+# Let $\Omega \subset \C$ be open.
+# endsnippet
+
+context "math()"
 snippet HH "H" iA
 \mathbb{H}
 endsnippet
 
+context "math()"
 snippet DD "D" iA
 \mathbb{D}
 endsnippet
+context "notmath()"
 snippet prf "proof" iA
 \begin{proof}
 	$1
 \end{proof}$2
 endsnippet
+
+context "notmath()"
 snippet thrm "theorem" iA
 \begin{theorem}
 	$1
 \end{theorem}$2
 endsnippet
-snippet lemm "lemma" iA
+
+context "notmath()"
+snippet lema "lemma" iA
 \begin{lemma}
 	$1
 \end{lemma}$2
 endsnippet
+
+context "notmath()"
 snippet coro "corollary" iA
 \begin{corollary}
 	$1
@@ -869,15 +952,10 @@ snippet "tab(le)?(\d+)x(\d+)" "Generate table of *rows* by *columns*" br
 endsnippet
 
 # Diff Eq
-context "math()"
-snippet La "Laplace" Ai
-\mathscr{L}\left\\{${1:${VISUAL}}\right\\}(${2:s})$0
-endsnippet
-
-context "math()"
-snippet Gamma "Gamma" Ai
-\Gamma $0
-endsnippet
+# context "math()"
+# snippet La "Laplace" Ai
+# \mathscr{L}\left\\{${1:${VISUAL}}\right\\}(${2:s})$0
+# endsnippet
 
 context "math()"
 snippet lambda "lambda" Ai
@@ -902,9 +980,41 @@ snippet unli "underline" Ai
 \underline{$1}$0
 endsnippet
 
+# underbrace
+context "math()"
+snippet unbr "underbrace" Ai
+\underbrace{$1}$0
+endsnippet
+
 # mathfrak style
 context "math()"
 snippet mfk "mathfrak" Ai
 \mathfrak{$1}$0
 endsnippet
+
+# mathcal style
+context "math()"
+snippet mhc "mathcal" Ai
+\mathcal{$1}$0
+endsnippet
+
+# mathbb style
+context "math()"
+snippet mbb "mathbb" Ai
+\mathbb{$1}$0
+endsnippet
+
+# mathbf style
+context "math()"
+snippet mbf "mathbf" Ai
+\mathbf{$1}$0
+endsnippet
+
+# mathscr style
+context "math()"
+snippet msc "mathscr" Ai
+\mathscr{$1}$0
+endsnippet
+
+
 

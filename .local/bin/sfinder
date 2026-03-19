@@ -1,12 +1,12 @@
 #!/bin/sh
 # variables
-sfinderBase="java -jar /home/mar/Document/PerfectClear/sfinderTools/solution-finder/sfinder.jar"
-sfinderDefaultArgs="-d 180 -K /home/mar/Document/PerfectClear/sfinderTools/solution-finder/kicks/jstris180.properties"
+sfinderBase="java -jar /home/mar/Documents/PerfectClear/sfinderTools/solution-finder/sfinder.jar"
+sfinderDefaultArgs="-d 180 -K /home/mar/Documents/PerfectClear/sfinderTools/solution-finder/kicks/jstris180.properties"
 commandType=$1
 additionalArgs=${@:2}
 
 # Theo setup finder
-ssetupFinderBase="java -jar /home/mar/Document/PerfectClear/sfinderTools/sfinder-pcsetup-v0.2.1.jar"
+ssetupFinderBase="java -jar /home/mar/Documents/PerfectClear/sfinderTools/sfinder-pcsetup-v0.2.1.jar"
 
 # additional default arguments depending on type of commandType
 if [ $commandType = "path" ]; then

@@ -1,3 +1,3 @@
-require'lspconfig'.jdtls.setup{
+vim.lsp.config('jdtls', {
     capabilities = capabilities,
-}
+})

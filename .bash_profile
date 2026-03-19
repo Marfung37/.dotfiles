@@ -33,3 +33,12 @@ export JAVAFX=/usr/lib/jvm/java-17-openjdk/lib/javafx.base.jar:/usr/lib/jvm/java
 
 # sfinder path
 export SFINDER=/home/mar/Documents/sfinderTools/solution-finder/sfinder.jar
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
+
+# start x
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+  startx
+fi

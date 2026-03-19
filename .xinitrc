@@ -55,4 +55,5 @@ fcitx5 &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 xcompmgr -c -C -t-5 -l-5 -r4.2 -o.85 & # transparent terminal
 xrandr --output eDP-1 --mode 1920x1080 &
+xrandr --output eDP-2 --mode 1920x1080 &
 exec /usr/bin/i3
