@@ -874,6 +874,7 @@ snippet coro "corollary" iA
 \end{corollary}$2
 endsnippet
 snippet tcl "theorem, proof, corollary, and lemma"
+\theoremstyle{definition}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{lemma}[theorem]{Lemma}
@@ -1014,6 +1015,12 @@ endsnippet
 context "math()"
 snippet msc "mathscr" Ai
 \mathscr{$1}$0
+endsnippet
+
+# oplus
+context "math()"
+snippet o+ "oplus" Ai
+\oplus
 endsnippet
 
 

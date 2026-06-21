@@ -19,22 +19,15 @@ vim.g.indentLine_concealcursor = ""
 vim.opt.number=true
 vim.opt.relativenumber=true
 
--- allow for changes while in insert mode
-vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
-     vim.lsp.diagnostic.on_publish_diagnostics,
-     {
-         underline = true,
-         virtual_text = {
-             spacing = 5,
-             severity = { min = vim.diagnostic.severity.WARN },
-         },
-         update_in_insert = true,
-     }
- )
+-- don't check for terminal detection
+vim.o.termsync = false
 
+-- allow for changes while in insert mode
 -- Disable virtual_text since it's redundant due to lsp_lines.
 vim.diagnostic.config({
-  virtual_text = false,
+     underline = true,
+     virtual_text = false,
+     update_in_insert = true
 })
 
 -- additional extensions
@@ -57,3 +50,4 @@ vim.filetype.add({
     svx = 'markdown',
   },
 })
+

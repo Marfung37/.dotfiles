@@ -6,18 +6,21 @@
 
 # set PATH so it includes user's private ~/.local/bin if it exists
 if [ -d "/home/mar/.local/bin" ] ; then
-    PATH="$PATH:/home/mar/.local/bin"
-fi
-
-if [ -d "/home/mar/.local/share/gem/ruby/3.0.0/bin" ] ; then
-    PATH="$PATH:/home/mar/.local/share/gem/ruby/3.0.0/bin"
+  export PATH="$PATH:/home/mar/.local/bin"
 fi
 
 # set PATH to use the python and pip in ~/.config/python-pkgs
 if [ -d "/home/mar/.virtualenv/debugpy/bin" ] ; then
-    PATH="/home/mar/.virtualenv/debugpy/bin:$PATH"
+  export PATH="$PATH:/home/mar/.virtualenv/debugpy/bin"
 fi
 
+if [ -d "/home/mar/.local/share/gem/ruby/3.0.0/bin" ] ; then
+  export PATH="$PATH:/home/mar/.local/share/gem/ruby/3.0.0/bin"
+fi
+
+if [ -d "/home/mar/go/bin" ] ; then
+  export PATH="$PATH:/home/mar/go/bin"
+fi
 
 # enable fcitx (IMF) for different langs
 export GTK_IM_MODULE=fcitx
